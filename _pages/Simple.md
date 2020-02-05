@@ -8,6 +8,6 @@ type: pages
 
 The following links are inter-document links within the site, efficiently loading new Smartdown content into the currently loaded website.
 
-- Check out the [Dungeon](:@rawpages/DungeonGameStarter)
-- Check out [AboutTheAuthor](:@rawpages/AboutTheAuthorSmartdown)
-- Back to [Simple](:@rawpages/Simple)
+- Check out the [Dungeon](:@/pages/DungeonGameStarter.md)
+- Check out [AboutTheAuthor](:@/pages/AboutTheAuthorSmartdown.md)
+- Back to [Simple](:@/pages/Simple.md)

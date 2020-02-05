@@ -6,3 +6,6 @@ title: About the Author
 
 {% include AboutTheAuthor.txt %}
 
+---
+
+The source for this page is at [`/pages/AboutTheAuthor.markdown`](/pages/AboutTheAuthor.markdown){:target="_blank"}.

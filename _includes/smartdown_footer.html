@@ -12,8 +12,7 @@
     /* eslint no-invalid-this: 0 */
     var sourceText = this.responseText;
     multiparts = smartdown.partitionMultipart(sourceText);
-    console.log('exampleLoaded', sourceText);
-    console.log('multiparts', multiparts);
+
     var output = document.getElementById('blog-content');
     smartdown.setHome(multiparts._default_, output, function() {
     });
@@ -50,7 +49,6 @@
     }
     else {
       var cardURL = cardKey;
-      console.log('cardKey/cardURL', cardKey, cardURL);
       if (cardKey.indexOf('http') === 0) {
         cardURL = cardKey;
       }

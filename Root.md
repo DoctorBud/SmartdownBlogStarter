@@ -7,7 +7,7 @@ smartdown: true
 
 ##### Root
 
-Check out [Simple](:@rawpages/Simple)
+Check out [Simple](:@/pages/Simple)
 
-Check out [Dungeon](:@rawpages/DungeonGameStarter)
+Check out [Dungeon](:@/pages/DungeonGameStarter)
 

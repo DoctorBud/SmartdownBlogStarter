@@ -9,5 +9,10 @@ This is the **first** post in an example blog. This blog is intended to be copie
 
 ### Links
 
-- [Smartdown Tour](:@raw/ABriefTourOfSmartdown/)
-- [Welcome To My Blog](:@raw/WelcomeToMyBlog/)
+- [Smartdown Tour](:@/posts/ABriefTourOfSmartdown.md)
+- [Welcome To My Blog](:@/posts/WelcomeToMyBlog.md)
+
+---
+
+The source for this page is at [`/posts/WelcomeToMyBlog.md`](/posts/WelcomeToMyBlog.md).
+

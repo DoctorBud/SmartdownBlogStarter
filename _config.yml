@@ -1,22 +1,24 @@
 ga: true
 title: BlogKit Example
   # theme: jekyll-theme-architect
-markdown_ext: 'markdown,mkdown,mkdn,mkd'
+markdown_ext: 'mkdown,mkdn,mkd'
+
 # permalink: pretty
 # gems:
 #   - jekyll-optional-front-matter
 collections:
-  raw:
+  posts:
     output: true
-    permalink: /raw/:title/
+    permalink: /posts/:title/
+  rawposts:
+    output: true
+    permalink: /posts/:title
   pages:
     output: true
     permalink: /pages/:title/
   rawpages:
     output: true
-    permalink: /rawpages/:title/
-  posts:
-    permalink: /posts/:title/
+    permalink: /pages/:title
 include:
   - _pages
 defaults:
@@ -28,9 +30,14 @@ defaults:
 #      layout: "default"
   - scope:
       path: ""
-      type: "posts" # previously `post` in Jekyll 2.2.
+      type: "posts"
     values:
       layout: "default_posts"
+  - scope:
+      path: "rawposts"
+      type: "posts"
+    values:
+      layout: "raw"
   - scope:
       path: ""
       type: "pages"
@@ -39,11 +46,6 @@ defaults:
   - scope:
       path: "rawpages"
       type: "pages"
-    values:
-      layout: "raw"
-  - scope:
-      path: "raw"
-      type: "posts"
     values:
       layout: "raw"
 sass:
