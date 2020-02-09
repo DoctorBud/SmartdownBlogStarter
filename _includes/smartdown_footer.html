@@ -1,8 +1,8 @@
 <script>
   /* global smartdown */
   var icons = {
-    'hypercube': 'assets/img/Hypercube.svg',
-    'StalactiteStalagmite': 'assets/img/StalactiteStalagmite.svg'
+    'hypercube': '{{ site.baseurl }}/assets/img/Hypercube.svg',
+    'StalactiteStalagmite': '{{ site.baseurl }}/assets/img/StalactiteStalagmite.svg'
   };
   var baseURL = '{{ site.baseurl }}/';
 
@@ -20,8 +20,8 @@
 
   function loadURL(url) {
     var oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", exampleLoaded);
-    oReq.open("GET", url);
+    oReq.addEventListener('load', exampleLoaded);
+    oReq.open('GET', url);
     oReq.send();
   }
 
@@ -40,6 +40,7 @@
   }
 
   function cardLoader(cardKey) {
+    // console.log('cardLoader', cardKey);
     var part = multiparts[cardKey];
     if (part) {
       var output = document.getElementById('blog-content');
@@ -58,6 +59,19 @@
 
   var calcHandlers = smartdown.defaultCalcHandlers;
   const linkRules = [];
+
+  window.addEventListener(
+    'popstate',
+    function(event) {
+      console.log('popstate location: ' + document.location, JSON.stringify(event.state));
+    },
+    false);
+  window.addEventListener(
+    'hashchange',
+    function(event) {
+      console.log('hashchange location: ' + document.location, JSON.stringify(event.state));
+    },
+    false);
 
   smartdown.initialize(icons, baseURL, loadInline, cardLoader, calcHandlers, linkRules);
 </script>
