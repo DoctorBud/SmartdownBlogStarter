@@ -12,3 +12,8 @@ This is a [GitHub Pages](https://pages.github.com)-based blog that utilizes the 
 
 The original theme used for this site has been heavily adapted, but was inspired by the
 [Stylish Portfolio](https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/){:target="_blank"} theme, &copy; 2013-2016 Blackrock Digital LLC
+
+
+---
+
+The source for this page is at [`/SmartdownBlogStarter/pages/AboutTheSite.markdown`](/SmartdownBlogStarter/pages/AboutTheSite.markdown){:target="_blank"}.

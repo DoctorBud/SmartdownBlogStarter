@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!--     <base href="{{ site.baseurl }}/">
- -->
+{% if page.smartdown == true %}
+{% else %}
+    <base href="{{ site.baseurl }}/">
+{% endif %}
+
     <link
       type="text/css"
       rel="stylesheet"
@@ -24,6 +27,17 @@
     </script>
     <script type="text/javascript" src="https://unpkg.com/smartdown/dist/lib/calc_handlers.js"></script>
     <script type="text/x-smartdown" id="Home">{{ content }}</script>
+
+    <style>
+      body {
+        background: #fbfbfe;
+      }
+
+      .smartdown-outer-container.smartdown-theme-blog p.smartdown_p {
+        margin: 4px 0 15px 0;
+        padding: 0 0 0 0;
+      }
+    </style>
 {% endif %}
   </head>
 

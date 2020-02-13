@@ -7,20 +7,43 @@
   var baseURL = '{{ site.baseurl }}/';
 
   var multiparts = null;
+  var current = null;
 
-  function exampleLoaded() {
+  function cardLoaded(url, cardKeySubhash, sourceText) {
     /* eslint no-invalid-this: 0 */
-    var sourceText = this.responseText;
     multiparts = smartdown.partitionMultipart(sourceText);
+
+    if (url.endsWith('.md')) {
+      const newPath = url.replace(/\.md$/, '/');
+      current = newPath;
+      history.pushState(null, null, newPath);
+    }
 
     var output = document.getElementById('blog-content');
     smartdown.setHome(multiparts._default_, output, function() {
+      document.body.scrollTop = 0; // For Chrome, Safari and Opera
+      document.documentElement.scrollTop = 0; // For IE and Firefox
+
+      if (cardKeySubhash) {
+        const target = document.getElementById(cardKeySubhash);
+        if (target) {
+          target.scrollIntoView();
+        }
+      }
     });
   }
 
   function loadURL(url) {
     var oReq = new XMLHttpRequest();
-    oReq.addEventListener('load', exampleLoaded);
+    let cardKeySubhash = null;
+    const hashPos = url.indexOf('#');
+    if (hashPos >= 0) {
+      cardKeySubhash = url.slice(hashPos + 1);
+    }
+
+    oReq.addEventListener('load', function() {
+      cardLoaded(url, cardKeySubhash, this.responseText);
+    });
     oReq.open('GET', url);
     oReq.send();
   }
@@ -29,14 +52,7 @@
     smartdown.loadCardsFromDocumentScripts();
     var s = smartdown.smartdownScripts[0];
 
-    multiparts = smartdown.partitionMultipart(s.text);
-    var output = document.getElementById('blog-content');
-    smartdown.setHome(multiparts._default_, output, function() {
-    });
-  }
-
-  function loadExample() {
-    loadURL('blog/home.md');
+    cardLoaded(window.location.href, window.location.hash.slice(1), s.text);
   }
 
   function cardLoader(cardKey) {
@@ -63,15 +79,24 @@
   window.addEventListener(
     'popstate',
     function(event) {
-      console.log('popstate location: ' + document.location, JSON.stringify(event.state));
+      const url = document.location.pathname;
+      if (url.endsWith('/')) {
+        const newPath = url.replace(/\/$/, '.md');
+        // console.log('popstatex: ', url, newPath, current, window.location.hash);
+        if (current && url !== current) {
+          loadURL(newPath);
+        }
+      }
     },
     false);
-  window.addEventListener(
-    'hashchange',
-    function(event) {
-      console.log('hashchange location: ' + document.location, JSON.stringify(event.state));
-    },
-    false);
+  // window.addEventListener(
+  //   'hashchange',
+  //   function(event) {
+  //     console.log(
+  //       'hashchange document.location.pathname: ' + document.location.pathname,
+  //       JSON.stringify(event.state));
+  //   },
+  //   false);
 
   smartdown.initialize(icons, baseURL, loadInline, cardLoader, calcHandlers, linkRules);
 </script>

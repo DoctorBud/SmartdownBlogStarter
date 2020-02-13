@@ -8,4 +8,4 @@ title: About the Author
 
 ---
 
-The source for this page is at [`/pages/AboutTheAuthor.markdown`](/pages/AboutTheAuthor.markdown){:target="_blank"}.
+The source for this page is at [`/SmartdownBlogStarter/pages/AboutTheAuthor.markdown`](/SmartdownBlogStarter/pages/AboutTheAuthor.markdown){:target="_blank"}.

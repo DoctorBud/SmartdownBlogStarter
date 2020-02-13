@@ -34,18 +34,18 @@ Note that the above links are intra-document links in a MultiCard Smartdown docu
 
 The links below, however, are inter-document links between one Smartdown document, and another. In both of these cases, no page-reload occurs and state is maintained.
 
-[Smartdown Tour](:@/posts/ABriefTourOfSmartdown.md)
-[Welcome To My Blog](:@/posts/WelcomeToMyBlog.md)
+[Smartdown Tour](:@/SmartdownBlogStarter/posts/ABriefTourOfSmartdown.md)
+[Welcome To My Blog](:@/SmartdownBlogStarter/posts/WelcomeToMyBlog.md)
 
 ### GIF Example
 
 I'm experimenting with incorporating GIFs for the purpose of building a tutorial. Below is a short video of the [Smartdown Viewer](https://smartdown.site) being used to edit Smartdown:
 
-![player](/assets/img/intro.gif)
+![player](/SmartdownBlogStarter/assets/img/intro.gif)
 
 ---
 
-The source for this page is at [`/posts/ABriefTourOfSmartdown.md`](/posts/ABriefTourOfSmartdown.md).
+The source for this page is at [`/SmartdownBlogStarter/posts/ABriefTourOfSmartdown.md`](/SmartdownBlogStarter/posts/ABriefTourOfSmartdown.md).
 
 
 # SVG

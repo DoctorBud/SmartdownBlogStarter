@@ -1,3 +1,5 @@
+baseurl: /SmartdownBlogStarter
+port: 4004
 ga: true
 title: BlogKit Example
   # theme: jekyll-theme-architect
@@ -20,6 +22,7 @@ collections:
     output: true
     permalink: /pages/:title
 include:
+  - _posts
   - _pages
 defaults:
 # Uncommenting this will allow plain-old-Markdown pages to work, but will break the
