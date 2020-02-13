@@ -11,4 +11,4 @@ smartdown: true
 
 ---
 
-The source for this page is at [`/SmartdownBlogStarter/pages/AboutTheAuthorSmartdown.md`](/SmartdownBlogStarter/pages/AboutTheAuthorSmartdown.md).
+The source for this page is at [`/pages/AboutTheAuthorSmartdown.md`](/pages/AboutTheAuthorSmartdown.md).

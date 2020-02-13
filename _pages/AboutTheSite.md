@@ -16,4 +16,4 @@ The original theme used for this site has been heavily adapted, but was inspired
 
 ---
 
-The source for this page is at [`/SmartdownBlogStarter/pages/AboutTheSite.markdown`](/SmartdownBlogStarter/pages/AboutTheSite.markdown){:target="_blank"}.
+The source for this page is at [`/pages/AboutTheSite.md`]({{ site.baseurl }}/pages/AboutTheSite.md){:target="_blank"}.

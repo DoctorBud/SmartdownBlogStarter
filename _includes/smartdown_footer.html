@@ -1,10 +1,10 @@
 <script>
   /* global smartdown */
+  var baseURL = '{{ site.baseurl }}';
   var icons = {
-    'hypercube': '{{ site.baseurl }}/assets/img/Hypercube.svg',
-    'StalactiteStalagmite': '{{ site.baseurl }}/assets/img/StalactiteStalagmite.svg'
+    'hypercube': `${baseURL}/assets/img/Hypercube.svg`,
+    'StalactiteStalagmite': `${baseURL}/assets/img/StalactiteStalagmite.svg`
   };
-  var baseURL = '{{ site.baseurl }}/';
 
   var multiparts = null;
   var current = null;
@@ -69,12 +69,36 @@
       if (cardKey.indexOf('http') === 0) {
         cardURL = cardKey;
       }
+      else {
+        const expanded = smartdown.expandHrefWithLinkRules(cardURL);
+        console.log('cardloader', cardURL, expanded);
+        cardURL = expanded;
+      }
+      // else if (cardKey.indexOf('/posts') === 0) {
+      //   cardURL = `${baseURL}${cardKey}`;
+      //   console.log('cardLoader', cardKey, cardURL);
+      // }
       loadURL(cardURL);
     }
   }
 
   var calcHandlers = smartdown.defaultCalcHandlers;
-  const linkRules = [];
+  const linkRules = [
+    {
+      prefix: '/posts/',
+      replace: baseURL + '/posts/',
+    },
+    {
+      prefix: '/pages/',
+      replace: baseURL + '/pages/',
+    },
+    {
+      prefix: '/assets/',
+      replace: baseURL + '/assets/',
+    },
+  ];
+
+
 
   window.addEventListener(
     'popstate',
@@ -98,5 +122,5 @@
   //   },
   //   false);
 
-  smartdown.initialize(icons, baseURL, loadInline, cardLoader, calcHandlers, linkRules);
+  smartdown.initialize(icons, `${baseURL}/`, loadInline, cardLoader, calcHandlers, linkRules);
 </script>
