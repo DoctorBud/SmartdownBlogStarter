@@ -1,11 +1,19 @@
 ---
 title: Welcome to My Blog
 smartdown: true
+render_with_liquid: false # Not available in GHPages Jekyll. Requires 4.0
 ---
+{% raw %}
 
 ## Welcome To My Example SmartBlog
 
 This is the **first** post in this example Blog.
+
+
+### Testing Liquid-immunity via `raw`
+
+- Test of `{{ site.baseurl }}`: {{ site.baseurl }}
+- Test of `{{ page.path }}`: {{ page.path }}
 
 ### Some Lorem Ipsum
 
@@ -25,3 +33,5 @@ Nibh sed pulvinar proin gravida hendrerit lectus. Nulla facilisi morbi tempus ia
 ---
 
 The source for this page is at [`/posts/WelcomeToMyBlog.md`](/posts/WelcomeToMyBlog.md).
+
+{% endraw %}

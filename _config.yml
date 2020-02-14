@@ -21,9 +21,9 @@ collections:
   rawpages:
     output: true
     permalink: /pages/:title
-include:
-  - _posts
-  - _pages
+# include:
+#   - _posts
+#   - _pages
 defaults:
 # Uncommenting this will allow plain-old-Markdown pages to work, but will break the
 # raw-mode delivery of unadorned smartdown source.
