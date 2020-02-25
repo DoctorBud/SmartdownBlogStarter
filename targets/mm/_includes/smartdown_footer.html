@@ -2,8 +2,8 @@
   /* global smartdown */
   var baseURL = '{{ site.baseurl }}';
   var icons = {
-    'hypercube': `${baseURL}/assets/img/Hypercube.svg`,
-    'StalactiteStalagmite': `${baseURL}/assets/img/StalactiteStalagmite.svg`
+    // 'hypercube': `${baseURL}/assets/img/Hypercube.svg`,
+    // 'StalactiteStalagmite': `${baseURL}/assets/img/StalactiteStalagmite.svg`
   };
 
   var multiparts = null;
@@ -52,11 +52,12 @@
     smartdown.loadCardsFromDocumentScripts();
     var s = smartdown.smartdownScripts[0];
 
+    console.log('loadInline', s.textContent.slice(0, 20));
     cardLoaded(window.location.href, window.location.hash.slice(1), s.text);
   }
 
   function cardLoader(cardKey) {
-    // console.log('cardLoader', cardKey);
+    console.log('cardLoader', cardKey);
     var part = multiparts[cardKey];
     if (part) {
       var output = document.getElementById('blog-content');
@@ -122,5 +123,6 @@
   //   },
   //   false);
 
-  smartdown.initialize(icons, `${baseURL}/`, loadInline, cardLoader, calcHandlers, linkRules);
+  console.log('smartdown.initialize');
+  smartdown.initialize(icons, `https://unpkg.com/smartdown/dist/`, loadInline, cardLoader, calcHandlers, linkRules);
 </script>
