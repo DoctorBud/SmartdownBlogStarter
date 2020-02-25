@@ -1,6 +1,16 @@
-.sass-cache
-_site
-Gemfile
+_hide
+targets/*/dist
+targets/*/assets
+targets/*/_posts
+targets/*/_pages
+targets/*/_rawposts
+targets/*/_rawpages
+targets/*/_site
+targets/*/_hide
+targets/*/.sass-cache
+targets/*/.jekyll-metadata
+targets/*/Gemfile.lock
+
 
 # Logs
 logs

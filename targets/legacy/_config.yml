@@ -1,0 +1,73 @@
+port: 4004
+ga: true
+safe: false
+title: BlogKit Example
+
+markdown_ext: 'markdown'
+excerpt_separator: <!--more-->
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+  rawposts:
+    output: true
+    permalink: /posts/:title
+  pages:
+    output: true
+    permalink: /pages/:title/
+  rawpages:
+    output: true
+    permalink: /pages/:title
+
+include:
+  - posts/
+  - pages/
+  - assets/css/*
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  # - targets/*
+  - Gemfile*
+  - "*.sh"
+  - targets/cb/
+  - targets/mm/
+  - hide/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default_posts"
+  - scope:
+      path: "rawposts"
+      type: "posts"
+    values:
+      layout: "raw"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default_pages"
+  - scope:
+      path: "rawpages"
+      type: "pages"
+    values:
+      layout: "raw"
+
+keep_files:
+  - assets
+  - posts
+  - pages
+  - categories
+  - img
+
+sass:
+  style: compressed
+  sass_dir: _sass

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+{% include head.html %}
+
+{% if page.smartdown == true %}
+<link rel=stylesheet href="https://unpkg.com/smartdown/dist/lib/smartdown.css">
+<link rel=stylesheet href="https://unpkg.com/smartdown/dist/lib/fonts.css">
+<script type="text/javascript" src="https://unpkg.com/smartdown/dist/lib/smartdown.js">
+</script>
+<script type="text/javascript" src="https://unpkg.com/smartdown/dist/lib/calc_handlers.js"></script>
+<script type="text/x-smartdown" id="Home"> 
+  {{ page.content }}
+</script>
+{% endif %}
+
+
+<body>
+
+  {% include navbar.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+
+{% if page.smartdown == true %}
+  {% include smartdown_footer.html %}
+{% endif %}
+
+  {% include google-analytics.html %}
+
+</body>
+
+</html>

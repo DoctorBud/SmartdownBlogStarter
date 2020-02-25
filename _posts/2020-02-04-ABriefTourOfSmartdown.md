@@ -1,8 +1,9 @@
 ---
 title: A Brief Tour of Smartdown
 smartdown: true
+categories: smartdown
+tags: welcome smartdown
 ---
-
 
 # WelcomeToSmartdown
 ---
@@ -12,7 +13,7 @@ smartdown: true
 Smartdown is an extension of Markdown that includes several additions:
 - Technical notation support, including [MathJax](https://www.mathjax.org) LaTeX and AsciiMath syntax, chemical notation via [`mhchem`](https://mhchem.github.io/MathJax-mhchem/),
 - Syntax highlighting via [highlight.js](https://highlightjs.org).
-- Reactive cells similar to those in a spreadsheet, but inline with Smartdown prose. These cells can be use for input, output, calculation, and for interacting with internet APIs such as Wikidata.
+- Reactive cells similar to those in a spreadsheet, but inline with Smartdown prose. These cells can be used for input, output, calculation, and for interacting with internet APIs such as Wikidata.
 - Media embedding support including Images, Tweets, SVG, Video.
 - [P5JS](https://p5js.org) to support drawing-based visualizations, games, and sound.
 - [Plotly.js](https://plot.ly/javascript/) to support data visualizations including various plots, charts, and maps.
@@ -41,7 +42,7 @@ The links below, however, are inter-document links between one Smartdown documen
 
 I'm experimenting with incorporating GIFs for the purpose of building a tutorial. Below is a short video of the [Smartdown Viewer](https://smartdown.site) being used to edit Smartdown:
 
-![player](/assets/img/intro.gif)
+![player](/assets/images/Intro.gif)
 
 ---
 
@@ -142,7 +143,9 @@ which Smartdown now renders as:
 
 Note that AsciiMath via MathJax does not support *display-mode* equations, but centering can be achieved via Markdown table syntax:
 
-||
+*FIXME: Table's aren't displayed full width in the Jekyll theme*
+
+|.................................|
 |:---:|
 |@sum_(i=1)^n i^3=((n(n+1))/2)^2@|
 

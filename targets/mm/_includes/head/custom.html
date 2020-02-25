@@ -1,0 +1,24 @@
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+{% if page.smartdown == true %}
+    <link rel=stylesheet href="https://unpkg.com/smartdown/dist/lib/smartdown.css">
+    <link rel=stylesheet href="https://unpkg.com/smartdown/dist/lib/fonts.css">
+    <script type="text/javascript" src="https://unpkg.com/smartdown/dist/lib/smartdown.js">
+    </script>
+    <script type="text/javascript" src="https://unpkg.com/smartdown/dist/lib/calc_handlers.js"></script>
+
+    <style>
+      #smartdown-outer-container.smartdown-outer-container {
+        color: black;
+      }
+    </style>
+{% endif %}
+
+{% if page.smartdown == true %}
+{% else %}
+    <base href="{{ site.baseurl }}/">
+{% endif %}

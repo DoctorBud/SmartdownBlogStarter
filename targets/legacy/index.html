@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<header id="top" class="header">
+  <div class="text-vertical-center">
+    <h2>BlogKit</h2>
+    <h3><b>Smartdown-capable Blog Example</b></h3>
+  </div>
+</header>
+
+<div class="container">
+  <div class="inner clearfix">
+    <section id="main-content">
+      <h3>Recent Posts</h3>
+
+      {% if site.posts.size > 0 %}
+        <ul class="bloglist">
+        {% for post in site.posts limit: 10 %}
+            <li>
+              <p class="bloglist_time">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y'}}</time>
+                  <a class="bloglist__link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              </p>
+            </li>
+        {% endfor %}
+        </ul>
+      {% else %}
+          <p>No posts yet!</p>
+      {% endif %}
+
+    </section>
+  </div>
+</div>
+
+{% include home.html %}
