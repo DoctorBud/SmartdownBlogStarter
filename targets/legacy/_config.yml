@@ -1,9 +1,18 @@
-baseurl: /SmartdownBlogStarter
+# baseurl: /SmartdownBlogStarter
 port: 4004
 ga: true
+safe: false
 title: BlogKit Example
   # theme: jekyll-theme-architect
 markdown_ext: 'mkdown,mkdn,mkd'
+excerpt_separator: <!--more-->
+
+plugins_dir         : targets/legacy/_plugins
+layouts_dir         : targets/legacy/_layouts
+data_dir            : targets/legacy/_data
+includes_dir        : targets/legacy/_includes
+
+# permalink: /posts/:title/
 
 # permalink: pretty
 # gems:
@@ -21,16 +30,30 @@ collections:
   rawpages:
     output: true
     permalink: /pages/:title
-# include:
-#   - _posts
-#   - _pages
+  img:
+    output: true
+    permalink: /img/:title
+
+include:
+  - posts/
+  - pages/
+  - rawposts/
+  - rawpages/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - targets/legacy/Gemfile*
+  - targets/legacy/*.sh
+  - targets/cb/
+  - targets/mm/
+  - hide/
+
 defaults:
-# Uncommenting this will allow plain-old-Markdown pages to work, but will break the
-# raw-mode delivery of unadorned smartdown source.
-#  - scope:
-#      path: "" # an empty string here means all files in the project
-#    values:
-#      layout: "default"
   - scope:
       path: ""
       type: "posts"
@@ -53,4 +76,4 @@ defaults:
       layout: "raw"
 sass:
   style: compressed
-  sass_dir: _sass
+  sass_dir: targets/legacy/_sass

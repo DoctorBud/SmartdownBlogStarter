@@ -1,11 +1,11 @@
 ---
 title: Welcome to My Blog
 smartdown: true
-render_with_liquid: false # Not available in GHPages Jekyll. Requires 4.0
 ---
+
 {% raw %}
 
-## Welcome To My Example SmartBlog
+## Welcome To My Blog
 
 This is the **first** post in this example Blog.
 
@@ -31,8 +31,8 @@ Coplanar exponential first outside inside last tangent, output trapezoid imagina
 
 Input Going to create SSS quartic hypercube warp speed arcsine. Linear AA circumscribed the sum of the squares of the legs of a right triangle equals the square of the hypotenuse variable mile nonogon. Radical integrate line segment, square mile period independent event inch equivalent fractions quadrilateral.
 
+{% endraw %}
+
 ---
 
 The source for this page is at [`/posts/WelcomeToMyBlog.md`](/posts/WelcomeToMyBlog.md).
-
-{% endraw %}

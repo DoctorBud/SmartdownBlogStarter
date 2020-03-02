@@ -1,8 +1,10 @@
+export target=${0%/*}
+${target}/build.sh
+
 REMOTE=`git remote get-url --push origin`
-jekyll build
-rm -rf dist
-cp -r _site/ dist/
-cd dist
+rm -rf ${target}/dist
+cp -r ${target}/_site/ ${target}/dist/
+cd ${target}/dist/
 git init
 git add .
 git commit -m "Initial commit"

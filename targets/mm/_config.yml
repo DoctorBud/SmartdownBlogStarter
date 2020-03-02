@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-baseurl: /SmartdownBlogStarter
+# baseurl: /SmartdownBlogStarter
 title: MM
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -23,17 +23,18 @@ description: >- # this means to ignore newlines until "baseurl:"
 twitter_username: username
 github_username: username
 minimal_mistakes_skin: default
+excerpt_separator: <!--more-->
 
-search: true
+# search: true
 
 # Build settings
-markdown: kramdown
-markdown_ext: 'markdown'
+# markdown: kramdown
+markdown_ext: 'mkdown,mkdn,mkd'
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# permalink: /:categories/:title/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
@@ -91,25 +92,35 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+# defaults:
+#   # _posts
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       layout: single
+#       author_profile: true
+#       read_time: true
+#       comments: true
+#       share: true
+#       related: true
+#   # _pages
+#   - scope:
+#       path: "pages"
+#       type: pages
+#     values:
+#       layout: single
+#       author_profile: true
+#   - scope:
+#       path: "rawposts"
+#       type: "posts"
+#     values:
+#       layout: "raw"
+#   - scope:
+#       path: "rawpages"
+#       type: "pages"
+#     values:
+#       layout: "raw"
 
 category_archive:
   type: liquid
@@ -122,7 +133,7 @@ tag_archive:
 
 ### Non-defaults
 
-port: 4008
+port: 4009
 minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
 collections:
@@ -139,31 +150,31 @@ collections:
     output: true
     permalink: /pages/:title
 
-# defaults:
-# # Uncommenting this will allow plain-old-Markdown pages to work, but will break the
-# # raw-mode delivery of unadorned smartdown source.
-# #  - scope:
-# #      path: "" # an empty string here means all files in the project
-# #    values:
-# #      layout: "default"
-#   - scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       layout: "default_posts"
-#   - scope:
-#       path: "rawposts"
-#       type: "posts"
-#     values:
-#       layout: "raw"
-#   - scope:
-#       path: ""
-#       type: "pages"
-#     values:
-#       layout: "default_pages"
-#   - scope:
-#       path: "rawpages"
-#       type: "pages"
-#     values:
-#       layout: "raw"
+defaults:
+# Uncommenting this will allow plain-old-Markdown pages to work, but will break the
+# raw-mode delivery of unadorned smartdown source.
+#  - scope:
+#      path: "" # an empty string here means all files in the project
+#    values:
+#      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default_posts"
+  - scope:
+      path: "rawposts"
+      type: "posts"
+    values:
+      layout: "raw"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default_pages"
+  - scope:
+      path: "rawpages"
+      type: "pages"
+    values:
+      layout: "raw"
 
