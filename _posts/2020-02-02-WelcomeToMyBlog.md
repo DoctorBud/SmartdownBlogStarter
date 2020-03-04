@@ -1,11 +1,13 @@
 ---
-title: Welcome to My Blog
+title: Welcome to My Smartdown-enabled Blog
 smartdown: true
 ---
 
 {% raw %}
 
-## Welcome To My Blog
+## Welcome to My Latest Smartdown-enabled Blog
+
+This is published via `publish_jekyll.sh`, where the site source is deployed to GitHub and `jekyll` is applied there.
 
 This is the **first** post in this example Blog.
 

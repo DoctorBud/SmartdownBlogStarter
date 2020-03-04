@@ -1,9 +1,9 @@
-# baseurl: /SmartdownBlogStarter
+baseurl: /SmartdownBlogStarter
 port: 4004
 ga: true
 safe: false
 title: BlogKit Example
-  # theme: jekyll-theme-architect
+
 markdown_ext: 'mkdown,mkdn,mkd'
 excerpt_separator: <!--more-->
 
@@ -34,11 +34,15 @@ collections:
     output: true
     permalink: /img/:title
 
+keep_files:
+  - assets
+
 include:
   - posts/
   - pages/
   - rawposts/
   - rawpages/
+  - targets/legacy/assets/css/*
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -47,6 +51,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  # - targets/*
   - targets/legacy/Gemfile*
   - targets/legacy/*.sh
   - targets/cb/
@@ -54,6 +59,10 @@ exclude:
   - hide/
 
 defaults:
+  - scope:
+      path: "targets/legacy/assets"
+    values:
+      image: true
   - scope:
       path: ""
       type: "posts"
