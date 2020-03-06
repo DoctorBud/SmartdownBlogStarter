@@ -9,5 +9,7 @@ ln -s ${target}/assets/ ${dest}/assets
 
 ${exec} jekyll serve \
 	--config=${config} \
-	--destination=${dest}
+	--destination=${dest} \
+	--baseurl=
+
 

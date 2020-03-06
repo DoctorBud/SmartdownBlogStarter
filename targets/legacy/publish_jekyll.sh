@@ -1,11 +1,12 @@
 export target=${0%/*}
 export tmp="/tmp/dist"
 
-REMOTE=`git remote get-url --push origin`
+# Remove traces of prior builds
 rm -rf ${target}/dist
 rm -rf ${target}/_site
 rm -rf ${tmp}
 
+# Construct Jekyll source to be deployed
 mkdir ${tmp}
 cp -r ${target} ${tmp}/
 cp ${target}/_config.yml ${tmp}/
@@ -22,10 +23,10 @@ mv legacy targets/legacy
 rm targets/legacy/Gemfile*
 rm targets/legacy/*.sh
 rm targets/legacy/_config.yml
-ls -l
-ls -l targets/legacy
 # exit
 
+# Push it
+REMOTE=`git remote get-url --push origin`
 git init
 git add .
 git commit -m "Initial commit"

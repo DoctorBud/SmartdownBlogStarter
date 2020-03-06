@@ -16,7 +16,7 @@ ${exec} jekyll build \
 # ls -l ${dest}
 
 cp -r ${target}/assets/ ${dest}/assets/
-cp -r ${dest}/targets/legacy/assets/css/main.css ${dest}/assets/css/main.css
+# cp -r ${dest}/targets/mm/assets/css/main.css ${dest}/assets/css/main.css
 rm -rf ${dest}/targets/
 
 # echo "after postprocess"

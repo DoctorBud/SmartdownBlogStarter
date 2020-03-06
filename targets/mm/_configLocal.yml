@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-baseurl: /SmartdownBlogStarter
+# baseurl: /SmartdownBlogStarter
 title: MM
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -22,21 +22,23 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 twitter_username: username
 github_username: username
-minimal_mistakes_skin: default
-excerpt_separator: <!--more-->
+minimal_mistakes_skin: "air" # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#theme
 
-# search: true
 
 # Build settings
 # markdown: kramdown
 markdown_ext: 'mkdown,mkdn,mkd'
 excerpt_separator: <!--more-->
 
-# plugins_dir         : targets/mm/_plugins
-# layouts_dir         : targets/mm/_layouts
-# data_dir            : targets/mm/_data
-includes_dir        : targets/mm/_includes
+# search: true
 
+# plugins_dir         : _plugins
+# layouts_dir         : _layouts
+# data_dir            : _data
+# includes_dir        : _includes
+
+# Build settings
+# markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 # permalink: /:categories/:title/
@@ -44,7 +46,32 @@ remote_theme: mmistakes/minimal-mistakes
 # paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# Plugins (previously gems:)
+keep_files:
+  - assets
+
+include:
+  - _posts
+  - _pages
+  - _rawposts
+  - _rawpages
+  - posts/
+  - pages/
+  - rawposts/
+  - rawpages/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - hide
+  - README.md
+  - targets/cb/
+  - targets/legacy/
+  - hide/
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -83,6 +110,26 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
+# defaults:
+#   # _posts
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       layout: single
+#       author_profile: true
+#       read_time: true
+#       comments: true
+#       share: true
+#       related: true
+#   # _pages
+#   - scope:
+#       path: "_pages"
+#       type: pages
+#     values:
+#       layout: single
+#       author_profile: true
+
 category_archive:
   type: liquid
   path: /categories/
@@ -91,42 +138,32 @@ tag_archive:
   path: /tags/
 
 
-
 ### Non-defaults
 
-port: 4009
-minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+  rawposts:
+    output: true
+    permalink: /posts/:title
+  pages:
+    output: true
+    permalink: /pages/:title/
+  rawpages:
+    output: true
+    permalink: /pages/:title
+  img:
+    output: true
+    permalink: /img/:title
 
-# collections:
-#   posts:
-#     output: true
-#     permalink: /posts/:title/
-#   rawposts:
-#     output: true
-#     permalink: /posts/:title
-#   pages:
-#     output: true
-#     permalink: /pages/:title/
-#   rawpages:
-#     output: true
-#     permalink: /pages/:title
-#   img:
-#     output: true
-#     permalink: /img/:title
-
-keep_files:
-  - assets
-
-include:
-  - posts/
-  - pages/
 
 # include:
 #   - posts/
 #   - pages/
 #   - rawposts/
 #   - rawpages/
-#   - targets/mm/assets/
+#   - assets/
 # exclude:
 #   - Gemfile
 #   - Gemfile.lock
@@ -135,59 +172,41 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-#   - targets/mm/hide
-#   - targets/mm/README.md
+#   - hide
+#   - README.md
 #   - targets/cb/
 #   - targets/legacy/
 #   - hide/
 
+
+
 defaults:
-  # _posts
+  - scope:
+      path: "assets"
+    values:
+      image: true
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
+      layout: "single"
   - scope:
-      path: "_pages"
-      type: pages
+      path: "rawposts"
+      type: "posts"
     values:
-      layout: single
-      author_profile: true
+      layout: "raw"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "single"
+  - scope:
+      path: "rawpages"
+      type: "pages"
+    values:
+      layout: "raw"
 
-# defaults:
-#   - scope:
-#       path: "targets/mm/assets"
-#     values:
-#       image: true
-#   - scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       layout: "default_posts"
-#   - scope:
-#       path: "rawposts"
-#       type: "posts"
-#     values:
-#       layout: "raw"
-#   - scope:
-#       path: ""
-#       type: "pages"
-#     values:
-#       layout: "default_pages"
-#   - scope:
-#       path: "rawpages"
-#       type: "pages"
-#     values:
-#       layout: "raw"
-
-sass:
-  style: compressed
-  sass_dir: targets/mm/_sass
+# sass:
+#   style: compressed
+#   sass_dir: _sass
 

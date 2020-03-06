@@ -7,16 +7,11 @@ title: BlogKit Example
 markdown_ext: 'mkdown,mkdn,mkd'
 excerpt_separator: <!--more-->
 
-plugins_dir         : targets/legacy/_plugins
+# plugins_dir         : targets/legacy/_plugins
 layouts_dir         : targets/legacy/_layouts
 data_dir            : targets/legacy/_data
 includes_dir        : targets/legacy/_includes
 
-# permalink: /posts/:title/
-
-# permalink: pretty
-# gems:
-#   - jekyll-optional-front-matter
 collections:
   posts:
     output: true
@@ -30,9 +25,6 @@ collections:
   rawpages:
     output: true
     permalink: /pages/:title
-  img:
-    output: true
-    permalink: /img/:title
 
 keep_files:
   - assets
@@ -83,6 +75,7 @@ defaults:
       type: "pages"
     values:
       layout: "raw"
+
 sass:
   style: compressed
   sass_dir: targets/legacy/_sass
