@@ -45,8 +45,8 @@ permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
-  - _posts
-  - _pages
+  - posts
+  - pages
 #   - _rawposts
 #   - _rawpages
 #   - posts/
@@ -55,14 +55,15 @@ include:
 #   - rawpages/
 exclude:
   - Gemfile
-  # - Gemfile.lock
-  # - node_modules
-  # - vendor/bundle/
-  # - vendor/cache/
-  # - vendor/gems/
-  # - vendor/ruby/
+  - Gemfile.lock
+  - dist
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - _hide
-  # - README.md
+  - README.md
   - targets/cb/
   - targets/legacy/
 

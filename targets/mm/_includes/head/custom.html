@@ -17,3 +17,8 @@
       }
     </style>
 {% endif %}
+
+{% if page.smartdown == true %}
+{% else %}
+    <base href="{{ site.baseurl }}/">
+{% endif %}
