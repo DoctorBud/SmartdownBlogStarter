@@ -1,5 +1,7 @@
+export target=${0%/*}
 REMOTE=`git remote get-url --push origin`
-bundle exec jekyll build
+${target}/build.sh
+
 rm -rf dist
 cp -r _site/ dist/
 cd dist

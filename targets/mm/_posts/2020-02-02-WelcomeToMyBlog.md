@@ -1,6 +1,7 @@
 ---
 title: Welcome to My Smartdown-enabled Blog
 smartdown: true
+categories: smartdown
 ---
 
 {% raw %}

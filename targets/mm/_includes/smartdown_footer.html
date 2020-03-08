@@ -20,6 +20,12 @@
       history.pushState(null, null, newPath);
     }
 
+    if (url.endsWith('.markdown')) {
+      const newPath = url.replace(/\.markdown$/, '/');
+      current = newPath;
+      history.pushState(null, null, newPath);
+    }
+
     var output = document.getElementById('blog-content');
     smartdown.setHome(multiparts._default_, output, function() {
       document.body.scrollTop = 0; // For Chrome, Safari and Opera
@@ -107,7 +113,7 @@
     function(event) {
       const url = document.location.pathname;
       if (url.endsWith('/')) {
-        const newPath = url.replace(/\/$/, '.md');
+        const newPath = url.replace(/\/$/, '.markdown');
         // console.log('popstatex: ', url, newPath, current, window.location.hash);
         if (current && url !== current) {
           loadURL(newPath);

@@ -1,6 +1,7 @@
 ---
 title: A Brief Tour of Smartdown
 smartdown: true
+categories: smartdown
 ---
 
 # WelcomeToSmartdown

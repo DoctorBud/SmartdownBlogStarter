@@ -1,23 +1,18 @@
 export target=${0%/*}
-exec="bundle exec --gemfile=${target}/Gemfile"
-config="${target}/_config.yml"
-dest="${target}/_site"
-dist="${target}/dist/"
+cd ${target}
 
-rm -rf ${dest}
-rm -rf ${dist}
-mkdir ${dest}
+rm -rf _site
 
-${exec} jekyll build \
-	--config=${config} \
-	--destination=${dest}
+bundle exec jekyll build \
+	--config=_config.yml \
+	--destination=_site
 
-# echo "after jekyll"
-# ls -l ${dest}
+# Amend the built _site
+touch _site/.nojekyll
+rm _site/*.sh
+ln -s index.md _site/categories/index.html
+ln -s index.md _site/posts/index.html
+cp -r assets/ _site/assets/
+cp -r ../../img/ _site/img/
 
-cp -r ${target}/assets/ ${dest}/assets/
-# cp -r ${dest}/targets/mm/assets/css/main.css ${dest}/assets/css/main.css
-rm -rf ${dest}/targets/
-
-# echo "after postprocess"
-# ls -l ${dest}
+ls -l _site/

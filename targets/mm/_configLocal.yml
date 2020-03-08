@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-# baseurl: /SmartdownBlogStarter
+baseurl: /SmartdownBlogStarter
 title: MM
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -24,10 +24,9 @@ twitter_username: username
 github_username: username
 minimal_mistakes_skin: "air" # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#theme
 
-
 # Build settings
 # markdown: kramdown
-markdown_ext: 'mkdown,mkdn,mkd'
+markdown_ext: 'markdown'
 excerpt_separator: <!--more-->
 
 # search: true
@@ -37,40 +36,35 @@ excerpt_separator: <!--more-->
 # data_dir            : _data
 # includes_dir        : _includes
 
-# Build settings
-# markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-# permalink: /:categories/:title/
+permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-keep_files:
-  - assets
-
 include:
   - _posts
   - _pages
-  - _rawposts
-  - _rawpages
-  - posts/
-  - pages/
-  - rawposts/
-  - rawpages/
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - hide
-  - README.md
-  - targets/cb/
-  - targets/legacy/
-  - hide/
+#   - _rawposts
+#   - _rawpages
+#   - posts/
+#   - pages/
+#   - rawposts/
+#   - rawpages/
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+#   - hide
+#   - README.md
+#   - targets/cb/
+#   - targets/legacy/
+#   - hide/
 
 plugins:
   - jekyll-paginate
@@ -110,34 +104,6 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
-# defaults:
-#   # _posts
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       layout: single
-#       author_profile: true
-#       read_time: true
-#       comments: true
-#       share: true
-#       related: true
-#   # _pages
-#   - scope:
-#       path: "_pages"
-#       type: pages
-#     values:
-#       layout: single
-#       author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-
 ### Non-defaults
 
 collections:
@@ -157,56 +123,50 @@ collections:
     output: true
     permalink: /img/:title
 
-
-# include:
-#   - posts/
-#   - pages/
-#   - rawposts/
-#   - rawpages/
-#   - assets/
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-#   - hide
-#   - README.md
-#   - targets/cb/
-#   - targets/legacy/
-#   - hide/
-
-
-
 defaults:
-  - scope:
-      path: "assets"
-    values:
-      image: true
+  # _posts
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "single"
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
   - scope:
       path: "rawposts"
       type: "posts"
     values:
       layout: "raw"
   - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "single"
-  - scope:
       path: "rawpages"
       type: "pages"
     values:
       layout: "raw"
+  # - scope:
+  #     path: "assets"
+  #   values:
+  #     image: true
 
-# sass:
-#   style: compressed
-#   sass_dir: _sass
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+keep_files:
+  - assets
+  - posts
+  - pages
+  - categories
 

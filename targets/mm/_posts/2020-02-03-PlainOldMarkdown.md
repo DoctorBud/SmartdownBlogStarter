@@ -1,5 +1,6 @@
 ---
 title: Plain Old Markdown
+categories: markdown
 ---
 
 ## GitHub-Flavored Markdown with Kramdown
