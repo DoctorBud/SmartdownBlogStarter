@@ -1,23 +1,19 @@
 export target=${0%/*}
 cd ${target}
 
+# Adjust target directory to look like a Jekyll site
+./sync.sh
+
+# Prepare build directory
 rm -rf _site
+mkdir _site
+cp -r ../../img/ _site/img/
+cp -r assets/ _site/assets/
 
 bundle exec jekyll build \
 	--config=_config.yml \
 	--destination=_site \
 	--baseurl=/SmartdownBlogStarter
 
-ls -l _site
-ls -l _site/posts
-ls -l _site/categories
-
 # Amend the built _site
 touch _site/.nojekyll
-rm _site/*.sh
-# cp _site/categories/index.md _site/categories/index.html
-# cp _site/posts/index.md _site/posts/index.html
-cp -r assets/ _site/assets/
-cp -r ../../img/ _site/img/
-
-ls -l _site/

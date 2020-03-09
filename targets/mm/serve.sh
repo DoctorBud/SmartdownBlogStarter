@@ -1,13 +1,23 @@
 export target=${0%/*}
-exec="bundle exec --gemfile=${target}/Gemfile"
-config="${target}/_config.yml"
-dest="${target}/_site"
+cd ${target}
 
-rm -rf ${dest}
-mkdir ${dest}
-ln -s ${target}/assets/ ${dest}/assets
+rm -rf _site/
+mkdir _site/
+./sync.sh
 
-${exec} jekyll serve \
-	--config=${config} \
-	--destination=${dest} \
+syncChanges() {
+	echo "+++ syncChanges"
+	cp -v -r ../../_pages/* _pages/
+	cp -v -r ../../_posts/* _posts/
+	ls -l _posts
+	pwd
+	echo "--- syncChanges"
+}
+
+trap "kill 0" EXIT
+(fswatch -o ../../_posts ../../_pages | while read f; do syncChanges; done) &
+
+bundle exec jekyll serve \
+	--config=_config.yml \
+	--destination=_site/ \
 	--baseurl=

@@ -1,17 +1,19 @@
 ---
 title: Welcome to My Smartdown-enabled Blog
 smartdown: true
+categories: smartdown
+tags: welcome smartdown
 ---
 
 {% raw %}
 
-## Welcome to My `MM`-themed Smartdown-enabled Blog
+## Welcome to My `minimal-mistakes`-themed Smartdown-enabled Blog
 
 ~~This is published via `publish_jekyll.sh`, where the site source is deployed to GitHub and `jekyll` is applied there.~~
 
 This is published via `publish.sh`, where the site source processed by `jekyll` and the output `_site` is deployed to GitHub.
 
-This is the **first** post in this example Blog.
+This is the first post in this example Blog.
 
 ### Testing Liquid-immunity via `raw`
 
@@ -28,6 +30,7 @@ Sed tempus urna et pharetra pharetra massa massa ultricies mi. Potenti nullam ac
 
 [Smartdown Tour](:@/posts/ABriefTourOfSmartdown.md)
 [Welcome To My Blog](:@/posts/WelcomeToMyBlog.md)
+
 
 ### Math Ipsum via [Math Ipsum](http://makesum.com/math#9581)
 

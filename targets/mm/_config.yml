@@ -37,7 +37,8 @@ excerpt_separator: <!--more-->
 # includes_dir: targets/mm/_includes
 
 
-remote_theme: mmistakes/minimal-mistakes
+# remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
 # Outputting
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
@@ -66,6 +67,7 @@ exclude:
   - README.md
   - targets/cb/
   - targets/legacy/
+  - "*.sh"
 
 plugins:
   - jekyll-paginate
@@ -123,6 +125,8 @@ collections:
   img:
     output: true
     permalink: /img/:title
+  about:
+    output: true
 
 defaults:
   # _posts
@@ -170,3 +174,4 @@ keep_files:
   - posts
   - pages
   - categories
+  - img
