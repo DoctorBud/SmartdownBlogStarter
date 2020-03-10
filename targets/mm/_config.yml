@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-# baseurl: /SmartdownBlogStarter
+
 title: MM
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -29,13 +29,7 @@ minimal_mistakes_skin: "air" # https://mmistakes.github.io/minimal-mistakes/docs
 markdown_ext: 'markdown'
 excerpt_separator: <!--more-->
 
-# search: true
-
-# plugins_dir         : targets/mm/_plugins
-# layouts_dir         : targets/mm/_layouts
-# data_dir            : targets/mm/_data
-# includes_dir: targets/mm/_includes
-
+search: true
 
 # remote_theme: mmistakes/minimal-mistakes
 theme: minimal-mistakes-jekyll
@@ -48,12 +42,6 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 include:
   - posts
   - pages
-#   - _rawposts
-#   - _rawpages
-#   - posts/
-#   - pages/
-#   - rawposts/
-#   - rawpages/
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -122,9 +110,6 @@ collections:
   rawpages:
     output: true
     permalink: /pages/:title
-  img:
-    output: true
-    permalink: /img/:title
   about:
     output: true
 
@@ -157,10 +142,6 @@ defaults:
       type: "pages"
     values:
       layout: "raw"
-  # - scope:
-  #     path: "assets"
-  #   values:
-  #     image: true
 
 category_archive:
   type: liquid
@@ -170,8 +151,8 @@ tag_archive:
   path: /tags/
 
 keep_files:
-  - assets
   - posts
   - pages
   - categories
+  - assets
   - img

@@ -1,16 +1,10 @@
-baseurl: /SmartdownBlogStarter
 port: 4004
 ga: true
 safe: false
 title: BlogKit Example
 
-markdown_ext: 'mkdown,mkdn,mkd'
+markdown_ext: 'markdown'
 excerpt_separator: <!--more-->
-
-# plugins_dir         : targets/legacy/_plugins
-layouts_dir         : targets/legacy/_layouts
-data_dir            : targets/legacy/_data
-includes_dir        : targets/legacy/_includes
 
 collections:
   posts:
@@ -26,15 +20,10 @@ collections:
     output: true
     permalink: /pages/:title
 
-keep_files:
-  - assets
-
 include:
   - posts/
   - pages/
-  - rawposts/
-  - rawpages/
-  - targets/legacy/assets/css/*
+  - assets/css/*
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -44,17 +33,13 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   # - targets/*
-  - targets/legacy/Gemfile*
-  - targets/legacy/*.sh
+  - Gemfile*
+  - "*.sh"
   - targets/cb/
   - targets/mm/
   - hide/
 
 defaults:
-  - scope:
-      path: "targets/legacy/assets"
-    values:
-      image: true
   - scope:
       path: ""
       type: "posts"
@@ -76,6 +61,13 @@ defaults:
     values:
       layout: "raw"
 
+keep_files:
+  - assets
+  - posts
+  - pages
+  - categories
+  - img
+
 sass:
   style: compressed
-  sass_dir: targets/legacy/_sass
+  sass_dir: _sass

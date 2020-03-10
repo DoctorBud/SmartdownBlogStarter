@@ -1,23 +1,19 @@
 export target=${0%/*}
-exec="bundle exec --gemfile=${target}/Gemfile"
-config="${target}/_config.yml"
-dest="${target}/_site"
-dist="${target}/dist/"
+cd ${target}
 
-rm -rf ${dest}
-rm -rf ${dist}
-mkdir ${dest}
+# Adjust target directory to look like a Jekyll site
+./sync.sh
 
-${exec} jekyll build \
-	--config=${config} \
-	--destination=${dest}
+# Prepare build directory
+rm -rf _site
+mkdir _site
+cp -r ../../img/ _site/img/
+cp -r assets/ _site/assets/
 
-# echo "after jekyll"
-# ls -l ${dest}
+bundle exec jekyll build \
+	--config=_config.yml \
+	--destination=_site \
+	# --baseurl=/SmartdownBlogStarter
 
-cp -r ${target}/assets/ ${dest}/assets/
-cp -r ${dest}/targets/legacy/assets/css/main.css ${dest}/assets/css/main.css
-rm -rf ${dest}/targets/
-
-# echo "after postprocess"
-# ls -l ${dest}
+# Amend the built _site
+touch _site/.nojekyll

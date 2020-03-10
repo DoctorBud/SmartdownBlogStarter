@@ -7,8 +7,6 @@ cd ${target}
 # Prepare build directory
 rm -rf _site
 mkdir _site
-cp -r ../../img/ _site/img/
-cp -r assets/ _site/assets/
 
 bundle exec jekyll build \
 	--config=_config.yml \
@@ -17,3 +15,4 @@ bundle exec jekyll build \
 
 # Amend the built _site
 touch _site/.nojekyll
+

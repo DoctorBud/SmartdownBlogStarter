@@ -9,7 +9,6 @@ syncChanges() {
 	echo "+++ syncChanges"
 	cp -v -r ../../_pages/* _pages/
 	cp -v -r ../../_posts/* _posts/
-	ls -l _posts
 	pwd
 	echo "--- syncChanges"
 }

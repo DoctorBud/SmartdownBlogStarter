@@ -42,7 +42,7 @@ The links below, however, are inter-document links between one Smartdown documen
 
 I'm experimenting with incorporating GIFs for the purpose of building a tutorial. Below is a short video of the [Smartdown Viewer](https://smartdown.site) being used to edit Smartdown:
 
-![player]({{ site.baseurl }}/img/Intro.gif)
+![player](/assets/images/Intro.gif)
 
 ---
 
