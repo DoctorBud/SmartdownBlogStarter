@@ -2,7 +2,6 @@ title:              Smartdown Blog
 email:              your-email@example.com
 description:        A Blog Theme by Start Bootstrap adapted for Smartdown
 author:             Your Name
-# baseurl:            "/smartblog"
 url:                "https://yourgithubname.github.io"
 
 # Social Profiles
@@ -15,8 +14,10 @@ linkedin_username:
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
-remote_theme: BlackrockDigital/startbootstrap-clean-blog-jekyll # mmistakes/minimal-mistakes
+# remote_theme: BlackrockDigital/startbootstrap-clean-blog-jekyll # mmistakes/minimal-mistakes
+theme: jekyll-theme-clean-blog
 markdown:           kramdown
+markdown_ext:       markdown
 paginate:           5
 paginate_path:      "/posts/page:num/"
 plugins:
@@ -26,15 +27,30 @@ plugins:
 
 excerpt_separator: <!--more-->
 
-
-
 ### Non-defaults
 
 port: 4008
 
+
 include:
-  - _pages
-  - _posts
+  - posts
+  - pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - dist
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _hide/
+  - README.md
+  - targets/mm/
+  - targets/legacy/
+  - "*.sh"
+
+
 
 collections:
   posts:
@@ -49,4 +65,30 @@ collections:
   rawpages:
     output: true
     permalink: /pages/:title
+  about:
+    output: true
 
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: "rawposts"
+      type: "posts"
+    values:
+      layout: "raw"
+  - scope:
+      path: "rawpages"
+      type: "pages"
+    values:
+      layout: "raw"
