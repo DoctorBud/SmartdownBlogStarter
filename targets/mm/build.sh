@@ -9,8 +9,6 @@ rm -rf _site
 mkdir _site
 
 bundle exec jekyll build \
-	--config=_config.yml \
-	--destination=_site \
 	--baseurl=/SmartdownBlogStarter
 
 # Amend the built _site

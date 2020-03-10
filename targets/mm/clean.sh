@@ -1,14 +1,15 @@
 export target=${0%/*}
+cd ${target}
 
-config="${target}/_config.yml"
-dest="${target}/_site/"
+bundle exec jekyll clean
 
-bundle exec jekyll clean \
-	--config ${config} \
-	--destination ${dest}
-
-rm -rf ${target}/dist/
-rm -f ${target}/.jekyll-metadata
-rm -rf ${target}/.jekyll-cache/
-rm -rf ${target}/.sass-cache/
-rm -rf ${target}/_site/
+rm -rf assets/
+rm -rf _pages/
+rm -rf _posts/
+rm -f _rawpages
+rm -f _rawposts
+rm -rf dist/
+rm -f .jekyll-metadata
+rm -rf .jekyll-cache/
+rm -rf .sass-cache/
+rm -rf _site/

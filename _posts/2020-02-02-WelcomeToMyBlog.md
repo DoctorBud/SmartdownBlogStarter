@@ -7,7 +7,7 @@ tags: welcome smartdown
 
 {% raw %}
 
-## Welcome to My `legacy`-themed Smartdown-enabled Blog
+## Welcome to My `mm`-themed Smartdown-enabled Blog
 
 ~~This is published via `publish_jekyll.sh`, where the site source is deployed to GitHub and `jekyll` is applied there.~~
 

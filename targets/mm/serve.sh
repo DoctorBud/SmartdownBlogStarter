@@ -16,7 +16,4 @@ syncChanges() {
 trap "kill 0" EXIT
 (fswatch -o ../../_posts ../../_pages | while read f; do syncChanges; done) &
 
-bundle exec jekyll serve \
-	--config=_config.yml \
-	--destination=_site/ \
-	--baseurl=
+bundle exec jekyll serve
