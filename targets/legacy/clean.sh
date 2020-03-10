@@ -1,13 +1,14 @@
 export target=${0%/*}
 
-exec="bundle exec --gemfile=${target}/Gemfile"
 config="${target}/_config.yml"
 dest="${target}/_site/"
 
-${exec} jekyll clean \
+bundle exec jekyll clean \
 	--config ${config} \
 	--destination ${dest}
 
+rm -rf ${target}/_pages/
+rm -rf ${target}/_posts/
 rm -rf ${target}/dist/
 rm -f ${target}/.jekyll-metadata
 rm -rf ${target}/.jekyll-cache/

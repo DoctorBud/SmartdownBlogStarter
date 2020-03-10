@@ -1,21 +1,14 @@
 export target=${0%/*}
-export tmp="/tmp/dist"
-
-# Remove traces of prior builds
-rm -rf ${target}/dist
-rm -rf ${target}/_site
-rm -rf ${tmp}
-
-# Build locally
+REMOTE=`git remote get-url --push origin`
 ${target}/build.sh
 
-# Construct site to be deployed
-cp -r ${target}/_site/ ${target}/dist/
-cd ${target}/dist/
-touch .nojekyll
+dist="/tmp/legacydist"
 
-# Push it
-REMOTE=`git remote get-url --push origin`
+cd ${target}
+rm -rf ${dist}
+cp -r _site/ ${dist}
+cd ${dist}
+
 git init
 git add .
 git commit -m "Initial commit"

@@ -1,4 +1,11 @@
+dist
+assets
+_posts
+_pages
+_rawposts
+_rawpages
 _site
+_hide
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
