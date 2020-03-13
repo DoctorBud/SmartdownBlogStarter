@@ -9,10 +9,6 @@ fi
 export targetName="${1}"
 export target="${here}/${targetName}"
 
-echo "here=${here}"
-echo "targetName=${targetName}"
-echo "target=${target}"
-
 if [[ ! -d ${target} ]]
 then
 	echo "The target ${target} does not exist!"
@@ -26,10 +22,6 @@ REMOTE=`git remote get-url --push origin`
 
 blogRoots="/tmp/blogRoots"
 dist="${blogRoots}/${targetName}"
-
-echo "targetName=${targetName}"
-echo "blogRoots=${blogRoots}"
-echo "dist=${dist}"
 
 ${here}/build.sh ${targetName}
 

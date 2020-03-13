@@ -5,7 +5,9 @@
 
 // Variables to modify font folders
 $icon-font-path:      "../fonts/bootstrap/";
-$fa-font-path:        "../fonts/font-awesome";
+// $fa-font-path:        "../fonts/font-awesome";
+
+$fa-font-path:        "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fonts";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "bootstrap-sass/bootstrap";

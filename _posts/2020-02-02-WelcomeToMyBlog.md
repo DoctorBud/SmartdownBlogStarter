@@ -1,5 +1,5 @@
 ---
-title: Welcome to My Multi-target Smartdown-enabled Blog
+title: Welcome to My Smartdown-enabled Blog
 smartdown: true
 categories: smartdown
 tags: welcome smartdown
@@ -7,11 +7,7 @@ tags: welcome smartdown
 
 {% raw %}
 
-## Welcome to My Multi-Target Smartdown-enabled Blog
-
-~~This is published via `publish_jekyll.sh`, where the site source is deployed to GitHub and `jekyll` is applied there.~~
-
-This is published via `publish.sh`, where the site source processed by `jekyll` and the output `_site` is deployed to GitHub.
+## Welcome to My Smartdown-enabled Blog
 
 This is the first post in this example Blog.
 
