@@ -1,13 +1,23 @@
 export target=${0%/*}
 REMOTE=`git remote get-url --push origin`
+
+targetname="legacy"
+blogroots="/tmp/blogroots"
+dist="${blogroots}/${targetname}"
+
+echo "targetname=${targetname}"
+echo "blogroots=${blogroots}"
+echo "dist=${dist}"
+
 ${target}/build.sh
 
-dist="/tmp/legacydist"
+mkdir -p ${blogroots}
+rm -rf ${blogroots}/.git
 
 cd ${target}
 rm -rf ${dist}
 cp -r _site/ ${dist}
-cd ${dist}
+cd ${blogroots}
 
 git init
 git add .

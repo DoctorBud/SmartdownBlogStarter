@@ -11,8 +11,7 @@ mkdir _site
 bundle exec jekyll build \
 	--config=_config.yml \
 	--destination=_site \
-	--baseurl=/SmartdownBlogStarter
+	--baseurl=/SmartdownBlogStarter/legacy
 
 # Amend the built _site
 touch _site/.nojekyll
-
