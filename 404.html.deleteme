@@ -1,6 +1,0 @@
----
-# layout: default
-type: home
----
-
-{% include 404.html %}

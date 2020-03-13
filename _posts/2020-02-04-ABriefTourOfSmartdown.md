@@ -143,9 +143,8 @@ which Smartdown now renders as:
 
 Note that AsciiMath via MathJax does not support *display-mode* equations, but centering can be achieved via Markdown table syntax:
 
-*FIXME: Table's aren't displayed full width in the Jekyll theme*
 
-|.................................|
+|`@sum_(i=1)^n i^3=((n(n+1))/2)^2@`|
 |:---:|
 |@sum_(i=1)^n i^3=((n(n+1))/2)^2@|
 
@@ -245,10 +244,10 @@ Examples:
 - [`WHAT` images](:=LOOKUP=/wikidataImages["`WHAT`"])
 
 
-- [Albert Einstein|Marie Curie|Max Plank (Slash, Thumbnails)](:=LOOKUP=/wikidataThumbs/Albert Einstein|Marie Curie|Max Plank)
-- [Albert Einstein (Falcor, Thumbnails)](:=LOOKUP=/wikidataThumbs["Albert Einstein"])
-- [Albert Einstein|Marie Curie|Max Plank (Slash, Original)](:=LOOKUP=/wikidataImages/Albert Einstein|Marie Curie|Max Plank)
-- [Albert Einstein (Falcor, Original)](:=LOOKUP=/wikidataImages["Albert Einstein"])
+- [Albert Einstein|Marie Curie|Max Plank (Slash, Thumbnails)](:=LOOKUP=/wikidataThumbs/Albert%20Einstein|Marie%20Curie|Max%20Plank)
+- [Albert Einstein (Falcor, Thumbnails)](:=LOOKUP=/wikidataThumbs["Albert%20Einstein"])
+- [Albert Einstein|Marie Curie|Max Plank (Slash, Original)](:=LOOKUP=/wikidataImages/Albert%20Einstein|Marie%20Curie|Max%20Plank)
+- [Albert Einstein (Falcor, Original)](:=LOOKUP=/wikidataImages["Albert%20Einstein"])
 - [Lookup result](:!LOOKUP)
 
 ---

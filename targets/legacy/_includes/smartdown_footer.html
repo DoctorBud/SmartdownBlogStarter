@@ -9,8 +9,10 @@
   var multiparts = null;
   var current = null;
 
+
   function cardLoaded(url, cardKeySubhash, sourceText) {
     /* eslint no-invalid-this: 0 */
+    sourceText = sourceText.trim();
     multiparts = smartdown.partitionMultipart(sourceText);
 
     if (url.endsWith('.md')) {

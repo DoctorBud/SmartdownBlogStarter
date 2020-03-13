@@ -9,8 +9,10 @@
   var multiparts = null;
   var current = null;
 
+
   function cardLoaded(url, cardKeySubhash, sourceText) {
     /* eslint no-invalid-this: 0 */
+    sourceText = sourceText.trim();
     multiparts = smartdown.partitionMultipart(sourceText);
 
     if (url.endsWith('.md')) {
@@ -52,12 +54,11 @@
     smartdown.loadCardsFromDocumentScripts();
     var s = smartdown.smartdownScripts[0];
 
-    console.log('loadInline', s.textContent.slice(0, 20));
     cardLoaded(window.location.href, window.location.hash.slice(1), s.text);
   }
 
   function cardLoader(cardKey) {
-    console.log('cardLoader', cardKey);
+    // console.log('cardLoader', cardKey);
     var part = multiparts[cardKey];
     if (part) {
       var output = document.getElementById('blog-content');
@@ -72,7 +73,7 @@
       }
       else {
         const expanded = smartdown.expandHrefWithLinkRules(cardURL);
-        console.log('cardloader', cardURL, expanded);
+        // console.log('cardloader', cardURL, expanded);
         cardURL = expanded;
       }
       // else if (cardKey.indexOf('/posts') === 0) {
@@ -123,6 +124,5 @@
   //   },
   //   false);
 
-  console.log('smartdown.initialize');
   smartdown.initialize(icons, `https://unpkg.com/smartdown/dist/`, loadInline, cardLoader, calcHandlers, linkRules);
 </script>
