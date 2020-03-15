@@ -1,9 +1,9 @@
 export here=${0%/*}
 REMOTE=`git remote get-url --push origin`
 
-# ${here}/build.sh cb
-# ${here}/build.sh legacy
-# ${here}/build.sh mm
+${here}/build.sh cb cb
+${here}/build.sh legacy legacy
+${here}/build.sh mm mm
 
 blogRoots="/tmp/blogRoots"
 
@@ -13,6 +13,7 @@ mkdir -p ${blogRoots}
 cp -r ${here}/cb/_site/ ${blogRoots}/cb
 cp -r ${here}/legacy/_site/ ${blogRoots}/legacy
 cp -r ${here}/mm/_site/ ${blogRoots}/mm
+cp ${here}/index.html ${blogRoots}/index.html
 
 cd ${blogRoots}
 

@@ -31,7 +31,7 @@ rm -rf ${blogRoots}/.git
 cd ${target}
 rm -rf ${dist}
 cp -r _site/ ${dist}
-cd ${blogRoots}
+cd ${dist}
 
 git init
 git add .
