@@ -1,3 +1,14 @@
+---
+title: About
+smartdown: true
+description: This is what I do.
+background: '/img/bg-about.jpg'
+---
+
+### About the Site
+
+This is a [GitHub Pages](https://pages.github.com)-based blog that utilizes the Jekyll services provided by GitHub, and optionally enables some posts and pages to utilize Smartdown, an in-browser renderer of enhanced Markdown and a reactive runtime.
+
 ### About the Author
 
 I am a nondescript being of unknown gender and background.
@@ -17,3 +28,7 @@ Smartdown (and Markdown) make it easy to include images. If you happen to have a
 
 - Wikimedia source of the above [Walrus](https://commons.wikimedia.org/wiki/File:Noaa-walrus22.jpg)
 
+
+---
+
+The source for this page is at [`/pages/About.md`]({{ site.baseurl }}/pages/About.md).

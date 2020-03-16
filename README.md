@@ -19,7 +19,7 @@ An important goal of this project is to separate an author's original *content* 
 
 This will enable you to quickly set up a copy of the `blog-kit` example on a forked version of the GitHub repo.
 
-#### Fork the repo
+#### Fork or Copy the Repository
 
 - Fork the `blog-kit` GitHub repository using [Fork](https://github.com/smartdown/blog-kit#fork-destination-box).
 - If desired, rename your forked repository and edit its description from the default to a description of your choice. The name of the forked repository will be used as the default website name when deployed. For the purpose of this QuickStart, we'll assume you've left the name as `blog-kit`.
@@ -36,7 +36,7 @@ This will enable you to quickly set up a copy of the `blog-kit` example on a for
 
 Many of the targets assume a Jekyll-based deployment and rely on various Ruby Gems to enable local development and static site building. So you will need to perform a one-time installation of the necessary dependencies.
 
-- Verify you have Ruby installed. *there is probably documentation about this on the Jekyll site).
+- Verify you have Ruby installed. *there is probably documentation about this on the Jekyll site*.
 - Go to the `mm` targets directory: `cd targets/mm/`
 - Install dependencies: `bundle install`
 
@@ -69,7 +69,7 @@ Assuming your current directory is your local root (`blog-kit/`, for this QuickS
 
 ### Details, Details, Details
 
-#### `targets/`cbgb scripts
+#### `targets/` scripts
 
 The `targets/` subdirectory of this project contains several scripts to manage the different targets.
 
@@ -79,7 +79,7 @@ The `targets/` subdirectory of this project contains several scripts to manage t
 - `targets/build.sh <target-name>`
 - `targets/sync.sh <target-name>`
 
-Typically, only `serve.sh` and `build.sh` will be used.
+Typically, only `serve.sh` and `publish.sh` will be used.
 
 
 ### Default GitHub Pages Domain Name Setup

@@ -1,3 +1,4 @@
+port:               4004
 title:              Smartdown Blog
 email:              your-email@example.com
 description:        A Blog Theme by Start Bootstrap adapted for Smartdown
@@ -26,11 +27,6 @@ plugins:
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
 
 excerpt_separator: <!--more-->
-
-### Non-defaults
-
-port: 4008
-
 
 include:
   - posts
@@ -65,8 +61,8 @@ collections:
   rawpages:
     output: true
     permalink: /pages/:title
-  about:
-    output: true
+  # about:
+  #   output: true
 
 
 defaults:
