@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/SmartdownBlogStarter/legacy/assets/css/main.css"
+      media="screen">
+
+    <title>
+    BlogKit Example
+    </title>
+
+
+    <link rel=stylesheet href="https://unpkg.com/smartdown/dist/lib/smartdown.css">
+    <link rel=stylesheet href="https://unpkg.com/smartdown/dist/lib/fonts.css">
+    <script type="text/javascript" src="https://unpkg.com/smartdown/dist/lib/smartdown.js">
+    </script>
+    <script type="text/javascript" src="https://unpkg.com/smartdown/dist/lib/calc_handlers.js"></script>
+    <script type="text/x-smartdown" id="Home">### About the Site
+
+This is a [GitHub Pages](https://pages.github.com)-based blog that utilizes the Jekyll services provided by GitHub, and optionally enables some posts and pages to utilize Smartdown, an in-browser renderer of enhanced Markdown and a reactive runtime.
+
+### About the Author
+
+I am a nondescript being of unknown gender and background.
+
+It is probably a good idea to replace this content with something more appropriate for you, the actual author.
+
+
+#### A picture of me, the Author
+
+Smartdown (and Markdown) make it easy to include images. If you happen to have an image URL, you can use it pretty easily. For example, here's a picture of me if I happened to be a Walrus:
+
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Noaa-walrus22.jpg/320px-Noaa-walrus22.jpg)
+
+
+#### Links to external resources
+
+- Wikimedia source of the above [Walrus](https://commons.wikimedia.org/wiki/File:Noaa-walrus22.jpg)
+
+
+---
+
+The source for this page is at [`/pages/About.md`](/SmartdownBlogStarter/legacy/pages/About.md).
+
+</script>
+
+    <style>
+      body {
+        background: #fbfbfe;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+  <i class="fa fa-bars"></i>
+</a>
+
+<nav id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+    <li class="sidebar-brand">
+      <a href="#top" onclick="$('#menu-close').click();">
+        <span>
+          <img src="/SmartdownBlogStarter/legacy/assets/img/Hypercube.svg" style="height:50px;">
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#top" onclick="$('#menu-close').click();">Home</a>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#a-about" onclick="$('#menu-close').click();">About&hellip;</a>
+      <ul>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-author" onclick="$('#menu-close').click();">The Author</a>
+        </li>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-content" onclick="$('#menu-close').click();">The Content</a>
+        </li>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-technology" onclick="$('#menu-close').click();">The Technology</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#a-contact" onclick="$('#menu-close').click();">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+    <div class="container-fluid smartdown-outer-container smartdown-theme-blog">
+      <div class="col-xs-12 smartdown-container" id="blog-content">
+      </div>
+    </div>
+
+    <ul class="pager">
+ <li class="next"><a href="/SmartdownBlogStarter/legacy/pages/DungeonGameStarter/">Dungeon Game Starter Title</a></li>
+ <li class="previous"><a href="/SmartdownBlogStarter/legacy"></a></li>
+</ul>
+
+
+
+
+
+    <footer>
+    <div class="container">
+      <hr class="small">
+      <div id="a-contact" class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <ul class="list-unstyled">
+            <li>
+              <i class="fa fa-link fa-fw"></i>
+              <a
+                href="https://smartdown.site"
+                target="_blank">
+                https://smartdown.site
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-twitter fa-fw"></i>
+              <a
+                href="https://twitter.com/TheDoctorBud"
+                target="_blank">
+                &commat;TheDoctorBud
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-envelope-o fa-fw"></i>
+              <a
+                href="mailto:email_placeholder@example.com">
+                email_placeholder@example.com
+              </a>
+            </li>
+          </ul>
+          <p class="text-muted">
+            BlogKit &copy; Daniel B Keith 2017
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- 
+    <script src="/SmartdownBlogStarter/legacy/assets/js/jquery/jquery.min.js"></script>
+    <script src="/SmartdownBlogStarter/legacy/assets/js/bootstrap/bootstrap.min.js"></script>
+ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Closes the sidebar menu
+      $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      // Opens the sidebar menu
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      // Scrolls to the selected menu item on the page
+      $(function() {
+          $('a[href*=\\#]:not([href=\\#],[data-toggle],[data-target],[data-slide])').click(function() {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  if (target.length) {
+                      $('html,body').animate({
+                          scrollTop: target.offset().top
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+      });
+      //#to-top button appears after scrolling
+      // Opens the sidebar menu
+      $("#to-top").click(function(e) {
+          e.preventDefault();
+          console.log('to-top');
+          $('html,body').animate({
+              scrollTop: 0
+          }, 1000);
+      });
+      var fixed = false;
+      $(document).scroll(function() {
+          if ($(this).scrollTop() > 250) {
+              if (!fixed) {
+                  fixed = true;
+                  // $('#to-top').css({position:'fixed', display:'block'});
+                  $('#to-top').show("slow", function() {
+                      $('#to-top').css({
+                          position: 'fixed',
+                          display: 'block'
+                      });
+                  });
+              }
+          } else {
+              if (fixed) {
+                  fixed = false;
+                  $('#to-top').hide("slow", function() {
+                      $('#to-top').css({
+                          display: 'none'
+                      });
+                  });
+              }
+          }
+      });
+    </script>
+
+
+<script>
+  /* global smartdown */
+  var baseURL = '/SmartdownBlogStarter/legacy';
+  var icons = {
+    'hypercube': `/assets/images/Hypercube.svg`,
+    'StalactiteStalagmite': `/assets/images/StalactiteStalagmite.svg`
+  };
+
+  var multiparts = null;
+  var current = null;
+
+
+  function cardLoaded(url, cardKeySubhash, sourceText) {
+    /* eslint no-invalid-this: 0 */
+    sourceText = sourceText.trim();
+    multiparts = smartdown.partitionMultipart(sourceText);
+
+    if (url.endsWith('.md')) {
+      const newPath = url.replace(/\.md$/, '/');
+      current = newPath;
+      history.pushState(null, null, newPath);
+    }
+
+    var output = document.getElementById('blog-content');
+    smartdown.setHome(multiparts._default_, output, function() {
+      document.body.scrollTop = 0; // For Chrome, Safari and Opera
+      document.documentElement.scrollTop = 0; // For IE and Firefox
+
+      if (cardKeySubhash) {
+        const target = document.getElementById(cardKeySubhash);
+        if (target) {
+          target.scrollIntoView();
+        }
+      }
+    });
+  }
+
+  function loadURL(url) {
+    var oReq = new XMLHttpRequest();
+    let cardKeySubhash = null;
+    const hashPos = url.indexOf('#');
+    if (hashPos >= 0) {
+      cardKeySubhash = url.slice(hashPos + 1);
+    }
+
+    oReq.addEventListener('load', function() {
+      cardLoaded(url, cardKeySubhash, this.responseText);
+    });
+    oReq.open('GET', url);
+    oReq.send();
+  }
+
+  function loadInline() {
+    smartdown.loadCardsFromDocumentScripts();
+    var s = smartdown.smartdownScripts[0];
+
+    cardLoaded(window.location.href, window.location.hash.slice(1), s.text);
+  }
+
+  function cardLoader(cardKey) {
+    // console.log('cardLoader', cardKey);
+    var part = multiparts[cardKey];
+    if (part) {
+      var output = document.getElementById('blog-content');
+      smartdown.setHome(part, output, function() {
+        // smartdown.startAutoplay(renderElement);
+      });
+    }
+    else {
+      var cardURL = cardKey;
+      if (cardKey.indexOf('http') === 0) {
+        cardURL = cardKey;
+      }
+      else {
+        const expanded = smartdown.expandHrefWithLinkRules(cardURL);
+        // console.log('cardloader', cardURL, expanded);
+        cardURL = expanded;
+      }
+      // else if (cardKey.indexOf('/posts') === 0) {
+      //   cardURL = `${baseURL}${cardKey}`;
+      //   console.log('cardLoader', cardKey, cardURL);
+      // }
+      loadURL(cardURL);
+    }
+  }
+
+  var calcHandlers = smartdown.defaultCalcHandlers;
+  const linkRules = [
+    {
+      prefix: '/posts/',
+      replace: baseURL + '/posts/',
+    },
+    {
+      prefix: '/pages/',
+      replace: baseURL + '/pages/',
+    },
+    {
+      prefix: '/assets/',
+      replace: baseURL + '/assets/',
+    },
+  ];
+
+
+
+  window.addEventListener(
+    'popstate',
+    function(event) {
+      const url = document.location.pathname;
+      if (url.endsWith('/')) {
+        const newPath = url.replace(/\/$/, '.md');
+        // console.log('popstatex: ', url, newPath, current, window.location.hash);
+        if (current && url !== current) {
+          loadURL(newPath);
+        }
+      }
+    },
+    false);
+  // window.addEventListener(
+  //   'hashchange',
+  //   function(event) {
+  //     console.log(
+  //       'hashchange document.location.pathname: ' + document.location.pathname,
+  //       JSON.stringify(event.state));
+  //   },
+  //   false);
+
+  smartdown.initialize(icons, `https://unpkg.com/smartdown/dist/`, loadInline, cardLoader, calcHandlers, linkRules);
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

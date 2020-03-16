@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <base href="/SmartdownBlogStarter/legacy/">
+
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/SmartdownBlogStarter/legacy/assets/css/main.css"
+      media="screen">
+
+    <title>
+    BlogKit Example
+    </title>
+
+
+  </head>
+
+  <body>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+  <i class="fa fa-bars"></i>
+</a>
+
+<nav id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+    <li class="sidebar-brand">
+      <a href="#top" onclick="$('#menu-close').click();">
+        <span>
+          <img src="/SmartdownBlogStarter/legacy/assets/img/Hypercube.svg" style="height:50px;">
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#top" onclick="$('#menu-close').click();">Home</a>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#a-about" onclick="$('#menu-close').click();">About&hellip;</a>
+      <ul>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-author" onclick="$('#menu-close').click();">The Author</a>
+        </li>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-content" onclick="$('#menu-close').click();">The Content</a>
+        </li>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-technology" onclick="$('#menu-close').click();">The Technology</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#a-contact" onclick="$('#menu-close').click();">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+    <div class="container">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <header id="top" class="header">
+  <div class="text-vertical-center">
+    <h2>BlogKit</h2>
+    <h3><b>Smartdown-capable Blog Example</b></h3>
+  </div>
+</header>
+
+<div class="container">
+  <div class="inner clearfix">
+    <section id="main-content">
+      <h3>Recent Posts</h3>
+
+      
+        <ul class="bloglist">
+        
+            <li>
+              <p class="bloglist_time">
+                  <time datetime="2020-02-04T00:00:00-08:00">Feb 4, 2020</time>
+                  <a class="bloglist__link" href="/SmartdownBlogStarter/legacy/posts/ABriefTourOfSmartdown/">A Brief Tour of Smartdown</a>
+              </p>
+            </li>
+        
+            <li>
+              <p class="bloglist_time">
+                  <time datetime="2020-02-03T00:00:00-08:00">Feb 3, 2020</time>
+                  <a class="bloglist__link" href="/SmartdownBlogStarter/legacy/posts/PlainOldMarkdown/">Plain Old Markdown</a>
+              </p>
+            </li>
+        
+            <li>
+              <p class="bloglist_time">
+                  <time datetime="2020-02-02T00:00:00-08:00">Feb 2, 2020</time>
+                  <a class="bloglist__link" href="/SmartdownBlogStarter/legacy/posts/WelcomeToMyBlog/">Welcome to My Smartdown-enabled Blog</a>
+              </p>
+            </li>
+        
+        </ul>
+      
+
+    </section>
+  </div>
+</div>
+
+<section id="a-about" class="services bg-secondary">
+  <div class="container">
+    <div class="row row-inset">
+      <div id="a-author" class="col-lg-10 col-lg-offset-1 text-center">
+        <h3>Pages of Interest</h3>
+        <hr class="small" />
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="service-item">
+              <span class="fa-stack fa-4x bg-secondary">
+                <a href="#a-author" class="btn-fa">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-user-o fa-stack-1x text-primary"></i>
+                </a>
+              </span>
+              <h4>
+                <strong>Site and Author</strong>
+              </h4>
+              <p>
+                <a href="pages/About">About</a>
+              </p>
+            </div>
+          </div>
+          <div id="a-content" class="col-xs-12 col-sm-4">
+            <div class="service-item">
+              <span class="fa-stack fa-4x bg-secondary">
+                <a href="#a-content" class="btn-fa">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-book fa-stack-1x text-primary"></i>
+                </a>
+              </span>
+              <h4>
+                <strong>Smartdown</strong>
+              </h4>
+              <p>
+                <a href="https://smartdown.site" target="_blank">
+                  Smartdown Viewer Site
+                </a>
+              </p>
+              <p>
+                <a href="https://smartdown.site/lib/" target="_blank">
+                  Smartdown Example Site
+                </a>
+              </p>
+              <p>
+                <a href="https://www.npmjs.com/package/smartdown" target="_blank">
+                  Smartdown NPM
+                </a>
+              </p>
+            </div>
+          </div>
+          <div id="a-technology" class="col-xs-12 col-sm-4">
+            <div class="service-item">
+              <span class="fa-stack fa-4x bg-secondary">
+                <a href="#a-technology" class="btn-fa">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-cogs fa-stack-1x text-primary"></i>
+                </a>
+              </span>
+              <h4>
+                <strong>Toys</strong>
+              </h4>
+              <p>
+                <a href="pages/DungeonGameStarter">Dungeon Game Starter</a>
+              </p>
+              <p>
+                <a href="pages/Simple">Simple</a>
+              </p>
+              <p>
+                <a href="/Root/">Root</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row hidden" id="overview-detailed">
+      <div class="col-xs-12">
+        <div id="overview-detailed-markdown" class="markdown">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        </section>
+      </div>
+
+      <ul class="pager">
+ <li class="next"><a href="/SmartdownBlogStarter/legacy"></a></li>
+ <li class="previous"><a href="/SmartdownBlogStarter/legacy"></a></li>
+</ul>
+
+    </div>
+
+
+
+    <footer>
+    <div class="container">
+      <hr class="small">
+      <div id="a-contact" class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <ul class="list-unstyled">
+            <li>
+              <i class="fa fa-link fa-fw"></i>
+              <a
+                href="https://smartdown.site"
+                target="_blank">
+                https://smartdown.site
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-twitter fa-fw"></i>
+              <a
+                href="https://twitter.com/TheDoctorBud"
+                target="_blank">
+                &commat;TheDoctorBud
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-envelope-o fa-fw"></i>
+              <a
+                href="mailto:email_placeholder@example.com">
+                email_placeholder@example.com
+              </a>
+            </li>
+          </ul>
+          <p class="text-muted">
+            BlogKit &copy; Daniel B Keith 2017
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- 
+    <script src="/SmartdownBlogStarter/legacy/assets/js/jquery/jquery.min.js"></script>
+    <script src="/SmartdownBlogStarter/legacy/assets/js/bootstrap/bootstrap.min.js"></script>
+ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Closes the sidebar menu
+      $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      // Opens the sidebar menu
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      // Scrolls to the selected menu item on the page
+      $(function() {
+          $('a[href*=\\#]:not([href=\\#],[data-toggle],[data-target],[data-slide])').click(function() {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  if (target.length) {
+                      $('html,body').animate({
+                          scrollTop: target.offset().top
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+      });
+      //#to-top button appears after scrolling
+      // Opens the sidebar menu
+      $("#to-top").click(function(e) {
+          e.preventDefault();
+          console.log('to-top');
+          $('html,body').animate({
+              scrollTop: 0
+          }, 1000);
+      });
+      var fixed = false;
+      $(document).scroll(function() {
+          if ($(this).scrollTop() > 250) {
+              if (!fixed) {
+                  fixed = true;
+                  // $('#to-top').css({position:'fixed', display:'block'});
+                  $('#to-top').show("slow", function() {
+                      $('#to-top').css({
+                          position: 'fixed',
+                          display: 'block'
+                      });
+                  });
+              }
+          } else {
+              if (fixed) {
+                  fixed = false;
+                  $('#to-top').hide("slow", function() {
+                      $('#to-top').css({
+                          display: 'none'
+                      });
+                  });
+              }
+          }
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

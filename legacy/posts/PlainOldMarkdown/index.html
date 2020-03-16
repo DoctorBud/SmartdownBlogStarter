@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <base href="/SmartdownBlogStarter/legacy/">
+
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/SmartdownBlogStarter/legacy/assets/css/main.css"
+      media="screen">
+
+    <title>
+    BlogKit Example
+    </title>
+
+
+  </head>
+
+  <body>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+  <i class="fa fa-bars"></i>
+</a>
+
+<nav id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+    <li class="sidebar-brand">
+      <a href="#top" onclick="$('#menu-close').click();">
+        <span>
+          <img src="/SmartdownBlogStarter/legacy/assets/img/Hypercube.svg" style="height:50px;">
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#top" onclick="$('#menu-close').click();">Home</a>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#a-about" onclick="$('#menu-close').click();">About&hellip;</a>
+      <ul>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-author" onclick="$('#menu-close').click();">The Author</a>
+        </li>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-content" onclick="$('#menu-close').click();">The Content</a>
+        </li>
+        <li>
+          <a href="/SmartdownBlogStarter/legacy/#a-technology" onclick="$('#menu-close').click();">The Technology</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="/SmartdownBlogStarter/legacy/#a-contact" onclick="$('#menu-close').click();">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+    <div class="container">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2 id="github-flavored-markdown-with-kramdown">GitHub-Flavored Markdown with Kramdown</h2>
+
+<p>BlogKit supports the standard <a href="https://help.github.com/articles/about-writing-and-formatting-on-github/">GitHub-flavored Markdown</a> provided by GitHub Pages. Specifically, GitHub Pages uses the <a href="https://kramdown.gettalong.org/quickref.html">kramdown</a> processor to convert Markdown into HTML within the GitHub Pages server.</p>
+
+<h3 id="markdown-examples">Markdown Examples</h3>
+
+<p>Here are some simple examples of Markdown.</p>
+
+<h4 id="styles">Styles</h4>
+
+<p>It’s very easy to make some words <strong>bold</strong> and other words <em>italic</em> with Markdown. You can even <a href="http://google.com">link to Google!</a></p>
+
+<p><em>This text will be italic</em>
+<em>This will also be italic</em></p>
+
+<p><strong>This text will be bold</strong>
+<strong>This will also be bold</strong></p>
+
+<p><em>You <strong>can</strong> combine them</em></p>
+
+<h4 id="tables">Tables</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content from cell 1</td>
+      <td>Content from cell 2</td>
+    </tr>
+    <tr>
+      <td>Content in the first column</td>
+      <td>Content in the second column</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>The source for this page is at <a href="/SmartdownBlogStarter/legacy/posts/PlainOldMarkdown.md" target="_blank"><code class="language-plaintext highlighter-rouge">/posts/PlainOldMarkdown.md</code></a>.</p>
+
+
+        </section>
+      </div>
+
+      <ul class="pager">
+ <li class="next"><a href="/SmartdownBlogStarter/legacy/posts/ABriefTourOfSmartdown/">A Brief Tour of Smartdown</a></li>
+ <li class="previous"><a href="/SmartdownBlogStarter/legacy/posts/WelcomeToMyBlog/">Welcome to My Smartdown-enabled Blog</a></li>
+</ul>
+
+    </div>
+
+
+
+    <footer>
+    <div class="container">
+      <hr class="small">
+      <div id="a-contact" class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <ul class="list-unstyled">
+            <li>
+              <i class="fa fa-link fa-fw"></i>
+              <a
+                href="https://smartdown.site"
+                target="_blank">
+                https://smartdown.site
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-twitter fa-fw"></i>
+              <a
+                href="https://twitter.com/TheDoctorBud"
+                target="_blank">
+                &commat;TheDoctorBud
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-envelope-o fa-fw"></i>
+              <a
+                href="mailto:email_placeholder@example.com">
+                email_placeholder@example.com
+              </a>
+            </li>
+          </ul>
+          <p class="text-muted">
+            BlogKit &copy; Daniel B Keith 2017
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- 
+    <script src="/SmartdownBlogStarter/legacy/assets/js/jquery/jquery.min.js"></script>
+    <script src="/SmartdownBlogStarter/legacy/assets/js/bootstrap/bootstrap.min.js"></script>
+ -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Closes the sidebar menu
+      $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      // Opens the sidebar menu
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      // Scrolls to the selected menu item on the page
+      $(function() {
+          $('a[href*=\\#]:not([href=\\#],[data-toggle],[data-target],[data-slide])').click(function() {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  if (target.length) {
+                      $('html,body').animate({
+                          scrollTop: target.offset().top
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+      });
+      //#to-top button appears after scrolling
+      // Opens the sidebar menu
+      $("#to-top").click(function(e) {
+          e.preventDefault();
+          console.log('to-top');
+          $('html,body').animate({
+              scrollTop: 0
+          }, 1000);
+      });
+      var fixed = false;
+      $(document).scroll(function() {
+          if ($(this).scrollTop() > 250) {
+              if (!fixed) {
+                  fixed = true;
+                  // $('#to-top').css({position:'fixed', display:'block'});
+                  $('#to-top').show("slow", function() {
+                      $('#to-top').css({
+                          position: 'fixed',
+                          display: 'block'
+                      });
+                  });
+              }
+          } else {
+              if (fixed) {
+                  fixed = false;
+                  $('#to-top').hide("slow", function() {
+                      $('#to-top').css({
+                          display: 'none'
+                      });
+                  });
+              }
+          }
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
